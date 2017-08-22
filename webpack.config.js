@@ -1,7 +1,7 @@
 module.exports = {
   entry: ['babel-polyfill', './app/index.js'],
   output: {
-    path: './build',
+    path: _dirname + '/build',
     // if the above line does not work, try `path: __dirname + '/build'`
     filename: 'bundle.js'
   },
@@ -16,7 +16,7 @@ module.exports = {
   },
   devServer: {
     port: 3000, // most common port
-    contentBase: './build',
+    contentBase: _dirname + '/build',
     inline: true
   }
 }
